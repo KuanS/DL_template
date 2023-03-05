@@ -69,3 +69,15 @@ def initLog(name, log_path=None):
             logger_.warning('{} is not a valid path. Ignore to save the log file.'.format(log_path))
     
     return logger_
+
+if __name__ == '__main__':
+    def unit_test():
+        logger.debug('DEBUG')
+        logger.info('INFO')
+        logger.warning('WARNING')
+        logger.error('ERROR')
+        logger.fatal('FATAL')
+        logger.critical('CRITICAL')
+
+    logger = initLog('initLog_TEST')
+    unit_test()
