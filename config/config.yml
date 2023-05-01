@@ -1,0 +1,62 @@
+# config file in yaml format
+# use 2 spaces as indention
+
+# dataset related config (mandatory)
+DATASET:
+  CLASS_TABLE: /home/kuan/Dataset/..
+  CLASS_NUMBER: 10
+  TRAIN_SET:
+    FILE_PATH: /home/kuan/pytorch_Pixel2Mesh/Data/kuan_train_list.txt
+    NORMALIZATION_MEAN:
+      - .485
+      - .456
+      - .406
+    NORMALIZATION_STD:
+      - .229
+      - .224
+      - .225
+  VALIDATE_SET:
+    FILE_PATH: /home/kuan/Dataset/..
+    NORMALIZATION_MEAN:
+      - .485
+      - .456
+      - .406
+    NORMALIZATION_STD:
+      - .229
+      - .224
+      - .225
+  TEST_SET:
+    FILE_PATH: /home/kuan/pytorch_Pixel2Mesh/Data/kuan_test_list.txt
+    NORMALIZATION_MEAN:
+      - .485
+      - .456
+      - .406
+    NORMALIZATION_STD:
+      - .229
+      - .224
+      - .225
+
+# model related config (mandatory)
+MODEL:
+  hidden: 128
+
+# trainign stage related config (mandatory)
+TRAIN:
+# TRAIN = {}
+  var1: 1
+  lr: 0.00001
+
+# validation stage related config (optional)
+VALIDATE:
+# VALIDATE = {}
+  var2: 2
+
+# inference stage related config (mandatory)
+TEST:
+# TEST = {}
+  var3: 3
+
+# other config (optional)
+AUX:
+# AUX = {}
+  var4: 4

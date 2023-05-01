@@ -61,7 +61,12 @@ class ConfigClass():
             return super().__setattr__(k, v)
         else:
             return None
-
+        
+    def __add__(self, b):
+        temp = vars(b)['_data'].copy()
+        temp.update(self._data)
+        return ConfigClass(temp)
+    
 if __name__ == '__main__':
     logger = initLog('cfgParser_TEST')
     filepath = os.path.dirname(os.path.abspath(__file__))
